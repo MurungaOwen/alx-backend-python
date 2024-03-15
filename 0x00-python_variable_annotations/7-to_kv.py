@@ -3,9 +3,6 @@
 import math
 from typing import Union
 
-def to_kv(k : str,v : Union[int, float]) -> tuple:
+def to_kv(k : str,v : Union[int, float]) -> tuple[str,float]:
     """get power of number and string"""  
-    output = k
-    output2 = float(math.pow(v,2))
-    total = (output,output2)
-    return total
+    return (k,float(math.pow(v,2)))
