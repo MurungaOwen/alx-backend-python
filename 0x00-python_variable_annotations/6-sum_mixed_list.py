@@ -8,7 +8,7 @@ floats and returns their sum as a float."""
 def sum_mixed_list(mxd_lst: List[Union[int, float]]) -> float:
     """a function that add ups a list of
     either float or integers"""
-    sum: float = 0
+    sum = 0.0
     for i in mxd_lst:
         sum += i
     return sum
