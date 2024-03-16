@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-"""module that contains function refactor array"""
 from typing import Tuple, Any
+"""module that contains function refactor array"""
+
 
 def zoom_array(lst: Tuple[Any, ...], factor: int = 2) -> Tuple[Any, ...]:
     """a function to zoom array"""
@@ -9,6 +10,7 @@ def zoom_array(lst: Tuple[Any, ...], factor: int = 2) -> Tuple[Any, ...]:
         for i in range(factor)
     )
     return zoomed_in
+
 
 array = (12, 72, 91)
 

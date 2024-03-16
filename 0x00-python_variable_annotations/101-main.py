@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 safely_get_value = __import__('101-safely_get_value').safely_get_value
 annotations = safely_get_value.__annotations__
 
