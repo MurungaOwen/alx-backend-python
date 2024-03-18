@@ -5,12 +5,8 @@ import random
 
 
 async def wait_random(max_delay: int = 10) -> float:
-    """async function for random delay
-    params:
-        delay which is integer
-    return:
-        random number
-    """
+    """function uses random module to wait for a random delay
+    and returns it"""
     rand = random.uniform(0, max_delay)
     await asyncio.sleep(rand)
     return rand
