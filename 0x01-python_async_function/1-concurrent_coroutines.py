@@ -12,10 +12,5 @@ async def wait_n(n: int, max_delay: int) -> list:
         return:
             list of random values
     """
-    values = []
-    async def get_values():
-        new_val = await wait_random(max_delay)
-        values.append(new_val)
-    for i in range(n):
-        await get_values()
-    return values
+    myList = [await wait_random(max_delay) for i in range(n)]
+    return myList
