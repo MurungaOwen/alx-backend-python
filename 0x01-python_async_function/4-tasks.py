@@ -4,8 +4,8 @@ Module containing function similar to
 wait_n
 """
 import typing
-import asyncio
-wait_n = __import__('1-concurrent_coroutines').wait_n
+wait_r = __import__('0-basic_async_syntax').wait_random
+task_wait_r = __import__('3-tasks').task_wait_random
 
 
 async def task_wait_n(n: int, max_delay: int) -> typing.List[float]:
@@ -16,5 +16,10 @@ async def task_wait_n(n: int, max_delay: int) -> typing.List[float]:
         return:
             a list of values
     """
-    result = await wait_n(n, max_delay)
-    return result
+    myList = []
+    for i in range(n):
+        task = task_wait_r(await wait_r(max_delay))
+        result = await task
+        myList.append(result)
+
+    return myList
